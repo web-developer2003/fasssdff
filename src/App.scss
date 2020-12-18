@@ -1,0 +1,1225 @@
+body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "SF Pro Display Semibold";
+  src: url("./fonts/SF-Pro-Display-Semibold.otf") format("truetype"); }
+.studentCount b {
+  font-family: "SF Pro Display Semibold", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SF-Pro-Display-Regular.otf") format("truetype"); }
+h1, h2, h3, h4, h5, h6, strong, p, a {
+  font-family: "SF Pro Display",sans-serif;
+  font-weight: normal; }
+
+.font-weight-bold {
+  font-family: "SF Pro Display Semibold", sans-serif !important; }
+
+.font-weight-normal {
+  font-family: "SF Pro Display", sans-serif !important; }
+
+.font-weight-light {
+  font-family: "SF Pro Display", sans-serif !important; }
+
+.side-menu {
+  height: 100%;
+  width: 18.9%;
+  position: fixed;
+  border-right: 3px solid #F9FAFC;
+}
+
+.rows {
+  margin-left: 22.6%;
+}
+
+.navbar-brand {
+  margin-left: 15.95%;
+  margin-top: 12.76%;
+}
+
+.firstMenuBar {
+  margin-left: 15.95%;
+  margin-top: 81px;
+  border-right: 3px solid #00B533;
+}
+
+.firstMenuBar img {
+  margin-right: 17.83px;
+}
+
+.secondMenuBar {
+  margin-left: 15.95%;
+  margin-top: 35px;
+}
+
+.secondMenuBar img {
+  margin-right: 18.17px;
+}
+
+.thirdMenuBar {
+  margin-left: 15.95%;
+  margin-top: 370px;
+}
+
+.thirdMenuBar img {
+  margin-right: 21.5px;
+}
+
+.fourthMenuBar {
+  margin-left: 15.95%;
+  margin-top: 35px;
+}
+
+.fourthMenuBar img {
+  margin-right: 17.83px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  color: black;
+}
+
+.lightGray {
+  color: #898a8c;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 16px;
+  color: #262626;
+  margin-left: 23%;
+  margin-top: 40px;
+}
+
+.rightcomps {
+  margin-left: 75.5%!important;
+  margin-top: 40px;
+  display: flex;
+}
+
+.ceo {
+  margin-left: -10%;
+  p {
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  margin-left: 21px;
+  a{
+    img {
+      margin-left: 27%;
+      margin-top: 20%;
+    }
+  }
+}
+
+.notification {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  margin-right: 55px;
+  margin-left: 25px;
+  a{
+    img {
+      margin-left: 27%;
+      margin-top: 20%;
+    }
+  }
+}
+
+.firstRow {
+  margin-top: 40px;
+}
+
+.cards {
+  border: 3px solid #F9FAFC;
+  width: 256px!important;
+  padding: 0;
+  .displayflex {
+    margin-left: 22px;
+    margin-top: 20px!important;
+    .calendar1 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F9FAFC;
+      margin-left: 10%;
+      a {
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .displayflex {
+    margin-left: 22px;
+    margin-top: 20px!important;
+    .calendar2 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F9FAFC;
+      margin-left: 28%;
+      a {
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .displayflex {
+    margin-left: 22px;
+    margin-top: 20px!important;
+    .calendar3 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F9FAFC;
+      margin-left: 28%;
+      a {
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .displayflex {
+    margin-left: 22px;
+    margin-top: 20px!important;
+    .calendar4 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F9FAFC;
+      margin-left: 28%;
+      a {
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+}
+
+.margin105 {
+  margin-top: 85px;
+}
+
+.displayflex {
+  display: flex;
+  margin-top: 0!important;
+}
+
+.marginTop {
+  margin-top: 20px!important;
+}
+
+.realPul {
+  border: 3px solid #F9FAFC;
+  width: 707px;
+  height: 230px;
+  .displayflex {
+    margin-top: 16px;
+    margin-left: 22px;
+    select {
+      margin-left: 160px;
+    }
+    .date {
+      margin-left: 26px;
+      margin-top: 8px;
+    }
+    .realPulCalendar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F9FAFC;
+      a {
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .components {
+    margin-top: 87px;
+    margin-bottom: 22px;
+    display: flex;
+    width: 235px;
+    height: 40px;
+    background: #F8F8F8;
+    border-radius: 50px;
+    .rounded50 {
+      width: 70px;
+      margin-left: 5.82%;
+      margin-top: 5px;
+      height: 28px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 1px rgba(232, 232, 232, 0.734238);
+      border-radius: 120px;
+      a {
+        margin-left: 19%;
+        color: #262626;
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    .notRounded {
+      margin-left: 5.5%;
+      margin-top: 5px;
+      opacity: 0.3;
+      a {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #262626;
+      }
+    }
+  }
+  .margin55 {
+    margin-top: 87px;
+    margin-left: 25%;
+    .bigFont {
+      font-family: SF Pro Display, serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      color: #000000;
+    }
+  }
+}
+
+.lineChart {
+  margin-top: -5px;
+  margin-left: -3px;
+  width: 707px;
+  height: 489px;
+  background: #FFFFFF;
+  border: 3px solid #F9FAFC;
+  .displayflex {
+    .displayflex {
+      margin-top: 0!important;
+      .firstDot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #00B533;
+        margin-top: 18px;
+        margin-right: 5px;
+        margin-left: 30px;
+      }
+    }
+    .displayflex {
+      margin-left: 0!important;
+      .secondDot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #f3ef20;
+        margin-top: 18px;
+        margin-right: 5px;
+        margin-left: 24px;
+      }
+    }
+    margin-top: 10px!important;
+    margin-left: 22px;
+    p {
+      margin-left: 12px;
+      margin-top: 10px;
+    }
+    .realPulCalendar {
+      margin-left: 24px;
+    }
+  }
+}
+
+.lineChart2 {
+  margin-left: -3px;
+  width: 707px;
+  height: 489px;
+  background: #FFFFFF;
+  border: 3px solid #F9FAFC;
+  .displayflex {
+    margin-top: 10px!important;
+    margin-left: 22px;
+    .displayflex {
+      margin-top: 0!important;
+      .firstDot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #00B533;
+        margin-top: 18px;
+        margin-right: 5px;
+        margin-left: 24px;
+      }
+      p {
+        margin-left: 0;
+      }
+    }
+    .displayflex {
+      margin-left: 0!important;
+      .secondDot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #f3ef20;
+        margin-top: 18px;
+        margin-right: 5px;
+        margin-left: 90px;
+      }
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+  p {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .realPulCalendar {
+    margin-left: 5px;
+  }
+}
+
+.charts {
+  .firstChart {
+    width: 318px;
+    height: 345px;
+    background: #FFFFFF;
+    border: 3px solid #F9FAFC;
+    .displayflex {
+      margin-left: 22px;
+      margin-top: 20px!important;
+      .cal {
+        margin-left: 16.8%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F9FAFC;
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .secondChart {
+    width: 318px;
+    height: 345px;
+    background: #FFFFFF;
+    border: 3px solid #F9FAFC;
+    .displayflex {
+      margin-left: 22px;
+      margin-top: 20px!important;
+      .cal {
+        margin-left: 41.3%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F9FAFC;
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+  .thirdChart {
+    width: 318px;
+    height: 345px;
+    background: #FFFFFF;
+    border: 3px solid #F9FAFC;
+    .displayflex {
+      margin-left: 22px;
+      margin-top: 20px!important;
+      .cal {
+        margin-left: 41.3%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F9FAFC;
+        img {
+          margin-left: 27%;
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+}
+
+.tableRow {
+  margin-top: 182px;
+  border: 3px solid #F9FAFC;
+  width: 1030px;
+  height: 367px;
+  .head {
+    width: 1030px;
+    .displayflex {
+      margin-left: 22px;
+      margin-top: 20px!important;
+      width: 100%;
+      p {
+      }
+      .pdate {
+        float: right;
+        margin-left: 712px;
+        margin-top: 7px;
+      }
+      .lastCal {
+        margin-left: 12px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+      }
+    }
+    .table {
+      width: 100%;
+      border: 1px solid #F9FAFC;
+      thead {
+        tr {
+          th {
+            padding-left: 15px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.extrainfo {
+  display: flex;
+  margin-left: 22px;
+  .studentCount {
+    font-family: "SF Pro Display Semibold", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    margin-right: 13px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 360px) {
+  .side-menu {
+    height: 100%;
+    width: 21%;
+    position: fixed;
+    border-right: 3px solid #F9FAFC;
+  }
+  .notification {
+    margin-right: 0!important;
+  }
+  .title {
+    text-transform: uppercase;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 22px;
+    color: #262626;
+    margin-left: 62.2%;
+    margin-top: 0!important;
+  }
+  .charts {
+    margin-left: 25%;
+    margin-top: 977px;
+  }
+  .rightcomps {
+    margin-left: 195.5%!important;
+    margin-top: 40px;
+    display: flex;
+  }
+  .rows {
+    margin-left: 62.2%;
+    width: 701px;
+  }
+  .firstRow {
+    width: 716px;
+  }
+  .cards {
+    width: 300px!important;
+  }
+  .tableRow {
+    .head {
+      width: 660px;
+    }
+    margin-top: 0!important;
+    width: 660px;
+    height: 390px;
+  }
+  .pdate {
+    margin-left: 360px!important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 460px) {
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 72%;
+  }
+  .rightcomps {
+    margin-left: 195% !important;
+  }
+  .rows {
+    margin-left: 70%;
+  }
+  .charts {
+    margin-top: 977px;
+  }
+  .firstRow {
+    width: 550px;
+  }
+  .tableRow {
+    .head {
+      width: 720px;
+    }
+    margin-top: 0!important;
+    width: 720px;
+    height: 390px;
+  }
+  .pdate {
+    margin-left: 418px!important;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 600px) {
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 40%;
+  }
+
+  .rightcomps {
+    margin-left: 132% !important;
+  }
+
+  .rows {
+    margin-left: 40%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 550px;
+  }
+
+  .tableRow {
+    .head {
+      width: 770px;
+    }
+    margin-top: 0!important;
+    width: 770px;
+    height: 390px;
+
+  }
+
+  .pdate {
+    margin-left: 468px!important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 740px){
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 37%;
+  }
+
+  .rightcomps {
+    margin-left: 124% !important;
+  }
+
+  .rows {
+    margin-left: 37%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 600px;
+  }
+
+  .cards {
+    width: 280px;
+  }
+
+  .tableRow {
+    .head {
+      width: 900px;
+    }
+    margin-top: 0!important;
+    width: 900px;
+    height: 390px;
+
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 30%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 30%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 600px!important;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 840px) {
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 34%;
+  }
+
+  .rightcomps {
+    margin-left: 113% !important;
+  }
+
+  .rows {
+    margin-left: 34%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 600px;
+  }
+
+  .cards {
+    width: 280px;
+  }
+
+  .tableRow {
+    .head {
+      width: 900px;
+    }
+    margin-top: 0!important;
+    width: 900px;
+    height: 390px;
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 30%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 30%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 600px!important;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 940px){
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 31%;
+  }
+
+  .rightcomps {
+    margin-left: 110% !important;
+  }
+
+  .rows {
+    margin-left: 30%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 600px;
+  }
+
+  .cards {
+    width: 280px;
+  }
+
+  .tableRow {
+    .head {
+      width: 950px;
+    }
+    margin-top: 0!important;
+    width: 950px;
+    height: 390px;
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 31%;
+        margin-top: 29%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 32%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 650px!important;
+  }
+}
+
+@media (min-width: 940px)  and (max-width: 1040px){
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 30%;
+  }
+
+  .rightcomps {
+    margin-left: 102% !important;
+  }
+
+  .rows {
+    margin-left: 29%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 600px;
+  }
+
+  .cards {
+    width: 280px;
+  }
+
+  .tableRow {
+    .head {
+      width: 960px;
+    }
+    margin-top: 0!important;
+    width: 960px;
+    height: 390px;
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 31%;
+        margin-top: 29%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 32%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 660px!important;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1140px) {
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 28%;
+  }
+
+  .rightcomps {
+    margin-left: 95% !important;
+  }
+
+  .rows {
+    margin-left: 27%;
+  }
+
+  .charts {
+    margin-top: 977px;
+  }
+
+  .firstRow {
+    width: 900px;
+  }
+
+  .cards {
+    width: 280px;
+  }
+
+  .tableRow {
+    .head {
+      width: 960px;
+    }
+    margin-top: 0!important;
+    width: 960px;
+    height: 390px;
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 31%;
+        margin-top: 29%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 32%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 660px!important;
+  }
+}
+@media (min-width: 1140px) and (max-width: 1240px){
+  body {
+    overflow-x: hidden;
+  }
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 27%;
+  }
+
+  .rightcomps {
+    margin-left: 95% !important;
+  }
+
+  .rows {
+    margin-left: 26%;
+    width: 1102px;
+  }
+
+  .charts {
+    .firstChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 16.8%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+    .secondChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 41.3%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+    .thirdChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 41.3%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  .firstRow {
+    width: 1140px!important;
+  }
+
+  .cards {
+    width: 256px!important;
+  }
+
+  .tableRow {
+    .head {
+      width: 1025px;
+    }
+    margin-top: 171px!important;
+    width: 1025px;
+    height: 400px;
+  }
+
+  .notification {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 31%;
+        margin-top: 29%;
+      }
+    }
+  }
+
+  .user {
+    width: 54px;
+    height: 46px;
+    a {
+      img {
+        margin-left: 32%;
+        margin-top: 30%;
+      }
+    }
+  }
+
+  .pdate {
+    margin-left: 718px!important;
+  }
+}
+
+@media (min-width: 1240px) and (max-width: 1340px){
+  body {
+    overflow-x: hidden;
+  }
+  .title {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 24%;
+  }
+
+  .rightcomps {
+    margin-left: 77% !important;
+  }
+
+  .rows {
+    margin-left: 23%;
+    width: 1102px;
+  }
+
+  .charts {
+    .firstChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 16.8%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+    .secondChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 41.3%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+    .thirdChart {
+      width: 318px;
+      height: 345px;
+      background: #FFFFFF;
+      border: 3px solid #F9FAFC;
+      .displayflex {
+        margin-left: 22px;
+        margin-top: 20px!important;
+        .cal {
+          margin-left: 41.3%;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #F9FAFC;
+          img {
+            margin-left: 27%;
+            margin-top: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  .firstRow {
+    width: 1059px!important;
+  }
+
+  .cards {
+    width: 256px!important;
+  }
+
+  .tableRow {
+    .head {
+      width: 1025px;
+    }
+    margin-top: 171px!important;
+    width: 1025px;
+    height: 400px;
+  }
+
+  .pdate {
+    margin-left: 718px!important;
+  }
+}
