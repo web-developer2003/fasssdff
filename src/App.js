@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
-import PieChart from "./pieChart/pieChart";
-import LineChart from "./lineChart/lineChart";
-import LineChart2 from "./lineChart/lineChart2";
-import logo from "./images/pdp.png"
-import dashboardLogo from "./images/dashboard.png"
-import settingsLogo from "./images/settingsLogo.png"
-import userLogo from "./images/user.png"
-import notificationLogo from "./images/notification.png"
-import calendarLogo from "./images/calendar.png"
-import plus from "./images/+.png"
+import {BrowserRouter as Router, Link, NavLink, Route, Switch} from "react-router-dom";
+import logo from "./images/pdp.png";
+import arrowLeft from "./images/arrow-left-line.svg";
+import Dashboard from "./pages/dashboard";
+import Settings from "./pages/settings";
+import Homepdp from "./pages/homepdp";
 import "./App.scss"
-import logout from "./images/chiqish.png";
-import up from "./images/up.png"
-import PieChart3 from "./pieChart/pieChart3";
-import PieChart2 from "./pieChart/pieChart2";
+import dashboard from "./images/dashboard.svg"
+import dashboardActive from "./images/dashboardactive.svg"
+import chiqish from "./images/chiqish.png"
+import up from "./images/up.svg"
+import upactive from "./images/upactive.svg"
+import settings from "./images/settings.svg"
+import settingsactive from "./images/settingsactive.svg"
+
 class App extends Component {
 
     constructor(props) {
@@ -60,271 +60,78 @@ class App extends Component {
                     berildi: "5,300,000",
                     qoldi: "3,000,000"
                 }
-            ]
+            ],
+            openMenu: false,
+            dashboard: false,
+            settings:false,
+            home:false
         }
 
     }
 
+    state = {
+        openMenu: false
+    }
+
+    changeActive=()=>{
+        this.setState({
+            dashboard:!this.setState.dashboard
+        })
+    }
+
     render() {
         return (
-            <div>
-                <div className="side-menu">
-                    <a className="navbar-brand" href="#"><img src={logo} alt="#"/></a>
-                    <div className="firstMenuBar">
-                        <a href="#" className="link"><img src={dashboardLogo} className="menuBarImg mb-1"
-                                                          alt="#"/>Dashboard</a>
+                <div className="container-fluid">
+                    <Router>
+                    <div className={this.state.openMenu ? "side-menu openMenu" : "side-menu"}>
+                            <div className="d-flex">
+                                {/*<a className="navbar-brand" href="#"><img src={logo} alt="#"/></a>*/}
+                                <Link to="/" className="navbar-brand"><img src={logo} alt="#"/></Link>
+                                <div className="arrow" onClick={()=>{this.setState({openMenu:false})}}><img src={arrowLeft} width="20px" alt=""/>
+                                </div>
+                            </div>
+                            <div className="firstMenuBar">
+                                <NavLink onClick={()=>{this.setState({dashboard:true, settings:false, home:false})}} to="/dashboard" activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "black",
+                                    borderRight:"3px solid #00B533",
+                                    paddingRight:"89px",
+                                    paddingTop:"6px",
+                                    paddingBottom:"6px"
+                                }} className="link lightGray" exact={true}><img src={this.state.dashboard ? dashboardActive : dashboard} className="menuBarImg mb-1" alt="#"/>Dashboard</NavLink>
+                            </div>
+                            <div className="secondMenuBar">
+                                <NavLink onClick={()=>{this.setState({dashboard:false, settings:true, home:false})}} to="/settings" activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "black",
+                                    borderRight:"3px solid #00B533",
+                                    paddingRight:"107px",
+                                    paddingTop:"6px",
+                                    paddingBottom:"6px"
+                                }} className="link lightGray"><img src={this.state.settings ? settingsactive : settings} className="menuBarImg mb-1" alt="#"/>Settings</NavLink>
+                            </div>
+                            <div className="thirdMenuBar">
+                                <NavLink onClick={()=>{this.setState({dashboard:false, settings:false, home:true})}} to="/pdpuz" activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "black",
+                                    borderRight:"3px solid #00B533",
+                                    paddingRight:"69px",
+                                    paddingTop:"6px",
+                                    paddingBottom:"6px"
+                                }} className="link lightGray"><img src={this.state.home ? upactive : up} className="menuBarImg mb-1" alt="#"/>Home pdp.uz</NavLink>
+                            </div>
+                            <div className="fourthMenuBar">
+                                <a href="/" className="link lightGray"><img src={chiqish} alt="#" className="menuBarImg mb-1"/>Chiqish</a>
+                            </div>
                     </div>
-                    <div className="secondMenuBar">
-                        <a href="#" className="link lightGray"><img src={settingsLogo} className="menuBarImg mb-1"
-                                                                    alt="#"/>Sozlamalar</a>
-                    </div>
-                    <div className="thirdMenuBar">
-                        <a href="https://pdp.uz/" className="link lightGray"><img src={up} alt="#" className="menuBarImg mb-1"/>Home pdp.uz</a>
-                    </div>
-                    <div className="fourthMenuBar">
-                        <a href="#" className="link lightGray"><img src={logout} alt="#" className="menuBarImg mb-1"/>Chiqish</a>
-                    </div>
+                        <Switch>
+                            <Route path="/" exact  component={Dashboard} exact={true}/>
+                            <Route path="/dashboard" component={Dashboard} />
+                            <Route path="/settings" component={Settings} />
+                            <Route path="/pdpuz"  component={Homepdp}/>
+                        </Switch>
+                    </Router>
                 </div>
-                <div className="row">
-                    <div className="rightcomps">
-                        <div className="ceo">
-                            <p>Odilbek Mirzayev</p>
-                        </div>
-                        <div className="user">
-                            <a href="#">
-                                <img src={userLogo} alt="#"/>
-                            </a>
-                        </div>
-                        <div className="notification">
-                            <a href="#">
-                                <img src={notificationLogo} alt="#"/>
-                            </a>
-                        </div>
-                    </div>
-                    <h1 className="title">Direktor Dashboard</h1>
-                </div>
-                <div className="row rows firstRow">
-                    <div className="cards">
-                        <div className="displayflex">
-                            <p><b>Ro'yxatdan o'tganlar<br/> talabalar soni</b></p>
-                            <div className="calendar1">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="extrainfo">
-                            <p className="studentCount ml-0">620</p>
-                            <p className="add"><span className="text-success">+5 ta</span><br/><span className="lightGray">in this month</span></p>
-                        </div>
-                    </div>
-                    <div className="cards">
-                        <div className="displayflex">
-                            <p><b>Aktiv <br/> talabalar soni</b></p>
-                            <div className="calendar2">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="extrainfo">
-                            <p className="studentCount ml-0 text-success">120</p>
-                            <p className="add"><span className="text-success">+34 ta</span><br/><span className="lightGray">in this month</span></p>
-                        </div>
-                    </div>
-                    <div className="cards">
-                        <div className="displayflex">
-                            <p><b>Bitirgan <br/> talabalar soni</b></p>
-                            <div className="calendar3">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="extrainfo">
-                            <p className="studentCount text-warning ml-0">120</p>
-                            <p className="add"><span className="text-warning">+34 ta</span><br/><span className="lightGray">in this month</span></p>
-                        </div>
-                    </div>
-                    <div className="cards">
-                        <div className="displayflex">
-                            <p><b>To'xtab qolgan <br/> talabalar soni</b></p>
-                            <div className="calendar4">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="extrainfo">
-                            <p className="studentCount text-danger ml-0">20</p>
-                            <p className="add"><span className="text-danger">+14 ta</span><br/><span className="lightGray">in this month</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div className="row linechartRow rows">
-                    <div className="p-0 realPul">
-                        <div className="displayflex marginTop">
-                            <p className="mb-0"><b>Umumiy tushum. <br/>Barcha tiplar bo'yicha</b></p>
-
-                            <select name="Real pul turi" className="form-control w-25 h-0 rounded-0"
-                                    id="currency">
-                                <option>Real pul turi</option>
-                                <option value="UZS">UZS</option>
-                                <option value="USD">USD</option>
-                                <option value="RUBL">RUBL</option>
-                            </select>
-                            <p className="date"><b>Sentabr.2020</b></p>
-                            <div className="ml-4 realPulCalendar">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="displayflex">
-                            <div className="components">
-                                <div className="notRounded">
-                                    <a href="#">BARCHASI</a>
-                                </div>
-                                <div className="rounded50">
-                                    <a href="#">REAL PUL</a>
-                                </div>
-                                <div className="notRounded">
-                                    <a href="#">NO REAL PUL</a>
-                                </div>
-                            </div>
-                            <p className="margin55"><span className="bigFont"><b>450.000.000 USZ</b></span> <br/>
-                                <span className="float-right">This month: <span
-                                    className="text-success"><b>+12,000,000</b></span></span></p>
-                        </div>
-                        <div className="lineChart">
-                            <div className="displayflex">
-                                <p><b>Tushumlar <br/> kategoriyalar boyicha</b></p>
-                                <div className="displayflex">
-                                    <div className="firstDot"> </div>
-                                    <p><b>Real pul <br/> </b><span
-                                        className="lightGray">Payme, Yandex</span>
-                                    </p>
-                                </div>
-                                <div className="displayflex">
-                                    <div className="secondDot"> </div>
-                                    <p><b>No real pul <br/></b><span className="lightGray">Vaucher, Cashback</span>
-                                    </p>
-                                </div>
-                                <p><b>Sentabr.2020</b></p>
-                                <div className="realPulCalendar">
-                                    <a href="#">
-                                        <img src={calendarLogo} alt="#"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <LineChart/>
-                        </div>
-                        <div className="lineChart2">
-                            <div className="displayflex">
-                                <p><b>Sotib olgan va <br/> ro'yxatdan otganlar</b></p>
-                                <div className="displayflex">
-                                    <div className="secondDot"></div>
-                                    <p><b>Sotib olingan</b></p>
-                                </div>
-                                <div className="displayflex">
-                                    <div className="firstDot"></div>
-                                    <p><b>Royxatdan otgan</b></p>
-                                </div>
-                                <p><b>Sentabr.2020</b></p>
-                                <div className="ml-3 realPulCalendar">
-                                    <a href="#">
-                                        <img src={calendarLogo} alt="#"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <LineChart2 />
-                        </div>
-                    </div>
-                    <div className="charts">
-                        <div className="firstChart">
-                            <div className="displayflex">
-                                <p><b>Sotib olingan va <br/> ro'yxatdan o'tganlar nisbati</b></p>
-                                <div className="cal">
-                                    <a href="#">
-                                        <img src={calendarLogo} alt="#"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="margin105">
-                                <PieChart/>
-                            </div>
-                        </div>
-                        <div className="secondChart">
-                            <div className="displayflex">
-                                <p><b>Pullar <br/> kurslar kesimida</b></p>
-                                <div className="cal">
-                                    <a href="#">
-                                        <img src={calendarLogo} alt="#"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="margin105">
-                                <PieChart2 />
-                            </div>
-                        </div>
-                        <div className="thirdChart">
-                            <div className="displayflex">
-                                <p><b>Talabalar <br/> kurslar kesimida</b></p>
-                                <div className="cal">
-                                    <a href="#">
-                                        <img src={calendarLogo} alt="#"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="margin105">
-                                <PieChart3 />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row rows tableRow">
-                    <div className="head">
-                        <div className="displayflex">
-                            <p><b>Mentor <br/>ishlab topgan pul</b></p>
-                            <p className="pdate"><b>Sentabr.2020</b></p>
-                            <div className="lastCal">
-                                <a href="#">
-                                    <img src={calendarLogo} alt="#"/>
-                                </a>
-                            </div>
-                        </div>
-                        <table className="table">
-                            <thead>
-                            <tr>
-                                <th>Mentor Ismi</th>
-                                <th>O'quvchi</th>
-                                <th>Kurslari</th>
-                                <th>Daromad</th>
-                                <th>Berildi</th>
-                                <th>Qoldi</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {
-                                this.state.teachers.map((item, index) =>
-                                    <tr key={index}>
-                                        <td><b>{item.fullName}</b></td>
-                                        <td>{item.students}</td>
-                                        <td>{item.courses}</td>
-                                        <td>{item.daromad}</td>
-                                        <td className="text-success">{item.berildi}</td>
-                                        <td className="text-danger">{item.qoldi}</td>
-                                        <td><a data-toggle="collapse" className="collapsed" href="#first"><img
-                                            src={plus} alt="#"/></a></td>
-                                    </tr>
-                                )
-                            }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         );
     }
 }
